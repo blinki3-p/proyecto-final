@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*Fuente de la pagina*/
 * {
     margin: 0;
@@ -248,3 +249,314 @@ h1{
 
 
 
+=======
+/*Fuente de la pagina*/
+* {
+    margin: 0;
+    padding: 0;
+}
+.fondo {
+    font-family: "Oswald", serif;
+    background-color: black;
+}
+
+/*Navbar y barra inicial, links/menu*/
+.navbar1 {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    background-color: rgb(182, 65, 65);
+    color: white;
+    padding: 10px;
+}
+
+.logo1 {
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.menu1 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 50px;
+    list-style: none;
+    margin: 10px;
+    padding: 30px;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+.menu1 a{
+    color: white;
+    font-size: 23px;
+    text-decoration: none;
+}
+
+a:hover {
+    font-size: 27px;
+    color:  rgb(19, 13, 20);
+
+}
+
+a:active {
+    color: yellowgreen;
+}
+
+
+.cta {
+    font-size: 23px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+#menu-toggle1 {
+    display: none;
+}
+
+/* Ícono del menú hamburguesa */
+.menu-hamburguesa1 {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.menu-hamburguesa1 span {
+    height: 3px;
+    width: 25px;
+    background: #333;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* Estilo para móviles */
+@media (max-width: 768px) {
+    .menu1 {
+        display: none;
+        flex-direction: column;
+        background:  rgb(102, 32, 32);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        border-radius: 5px;
+    }
+
+    #menu-toggle1:checked + .menu-hamburguesa1 + .menu1 {
+        display: flex;
+    }
+
+    .menu-hamburguesa1 {
+        display: flex;
+        padding: 15px;
+    }
+}
+
+/*Alineaciones y  tamaños de titulos y parrafos sueltos*/
+
+.h2 h2{
+    text-align: center;
+    size: 300px;
+    color: #ff3e3e;;
+    font-family: "Creepster", system-ui;
+    text-decoration: underline overline;
+}
+
+p{
+    text-align: center;
+    color: #e9e5e5;
+}
+
+.fondo h1{
+    padding: 20px;
+    margin: 20px 0;
+    color: #ff3e3e;
+    font-size: 48px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+
+/*Imagenes*/
+.pagina1 img {
+    width: 200px;
+    margin-left: auto;
+}
+.fotopersonajes img{
+        max-width: 100%;  
+        height: auto;    
+        max-height: 300px; 
+        object-fit: contain; 
+        display: block;   
+        margin: 0 auto;   
+}
+
+.infectados img {
+    width: 175px;
+    margin: 5%;
+    height: 150px;
+    border-radius: 15%;
+    margin: 15%;
+    border:2px solid #fff;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+
+/*Primera Pagina LF4LORE*/
+.pagina1 {
+    display: grid;
+    grid-template-columns: 1fr 2 fr;
+    gap: 20px;
+    padding: 20px;
+}
+.pagina1 p{
+    grid-column: span 2;
+    text-align: center;
+    color: white;
+}
+
+.pagina1 h3 {
+    color: white;
+}
+.pagina1 .contenedor1 {
+    display: flex; 
+    flex-direction: row-reverse;
+    gap: 20px; 
+}
+
+.barra-lateral1 {
+    width: 25%; 
+    background-color: #033b1b; 
+    padding: 15px;
+    border: 1px solid #033b1b; 
+    border-radius: 8px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+}
+
+.contenido1 {
+    width: 75%; 
+    text-align: justify; 
+    padding: 15px;
+    border-radius: 2%;
+    border: 5px solid white; 
+    background-color: black; 
+}
+
+
+
+
+
+/* Pagina 2 Sup y sus hist*/
+.contenedor {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px; 
+    padding: 10px;
+}
+
+.barra-lateral {
+    width: 25%; 
+    background-color: #f4f4f4; 
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+    text-align: center; 
+}
+
+.contenido-principal {
+    width: 75%; 
+    text-align: justify; 
+    padding: 10px;
+    border: 1px solid #ddd;}
+
+
+.texto-personajes {
+        display: grid;
+        grid-template-columns: 1fr 2 fr;
+        gap: 20px;
+        padding: 20px;
+    }
+.texto-personajes p{
+    grid-column: span 2;
+    text-align: center;
+    color: rgb(103, 221, 103);
+}
+
+#carouselExample {
+    margin-bottom: 30px;
+}
+
+.texto-personajes div {
+    margin-top: 20px;
+}
+
+
+/*PAGINA 3 CAMPAÑAS*/
+
+
+
+
+
+/*Pagina 4 "easter eggs"*/
+.easter-eggs h3{
+    color: blue;
+    text-align: center;
+}
+
+/* Pagina 5 Infectados*/
+.infectados h3 {
+    color: white;
+    text-align: center;
+}
+.infectados {
+    align-items: center;
+    justify-content: center;
+}
+.infectados {
+    background-color: black;
+}
+
+
+
+
+/*Pie de pagina que se repetira en cada html*/
+.piedepagina p{
+    color: white;
+    font-size: 18px;
+}
+
+.piedepagina h5 {
+    color: black;
+    font-size: 23px;
+}
+
+.piedepagina {
+    display: flex;             
+    justify-content: center;   
+    align-items: center;       
+    text-align: center;        
+    padding: 20px;             
+}
+.piedepagina  .card{
+    margin: 0 auto;
+    background-color: rgb(75, 87, 104);
+}
+
+
+
+
+>>>>>>> 10d258a (modificando archivos)
