@@ -1,0 +1,57 @@
+/*Utilities*/
+@use '../utilities/mixins' as *;
+@use '../utilities/extends' as *;
+@use '../utilities/maps' as *;
+
+/* variables */
+@use './variables' as *;
+
+
+// Estilos globales
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.fondo {
+  font-family: $font-oswald;
+  background-color: $color-black;
+}
+
+.h2 h2 {
+  @extend %text-center;
+  color: #ff3e3e;
+  font-family: $font-creepster;
+  text-decoration: underline overline;
+}
+
+p {
+  @extend %text-center;
+  color: $color-grey;
+}
+
+.fondo h1 {
+  padding: 20px;
+  margin: 20px 0;
+  color: #ff3e3e;
+  font-size: 48px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  @extend %text-center;
+}
+
+// Estilos para imágenes
+.pagina1 img {
+  width: 200px;
+  margin-left: auto;
+}
+
+.fotopersonajes img,
+.tamaño-imagen img {
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}

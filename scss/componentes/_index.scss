@@ -1,0 +1,261 @@
+/*Utilities*/
+@use '../utilities/mixins' as *;
+@use '../utilities/extends' as *;
+@use '../utilities/maps' as *;
+
+
+/*base*/
+@use '../base/variables' as *;
+
+.pagina1 {
+  @include grid-layout(1fr 2fr);
+  gap: 20px;
+  padding: 20px;
+
+  p {
+      grid-column: span 2;
+      @extend %text-center;
+      color: $color-white;
+  }
+
+  h3 {
+      color: $color-white;
+  }
+
+  .contenedor1 {
+      @include flex-center;
+      flex-direction: row-reverse;
+      gap: 20px;
+  }
+
+  .barra-lateral1 {
+    grid-column: 1;
+      background-color: $color-darkgreen;
+      padding: 15px;
+      border: 1px solid $color-darkgreen;
+      @extend %border-radius;
+      @extend %shadow;
+      @extend %text-center;
+  }
+
+  .contenido1 {
+      grid-column: 2;
+      background-color: $color-black;
+      border: 5px solid $color-white;
+      padding: 15px;
+      text-align: justify;
+      @extend %border-radius;
+  }
+}
+
+// Página 2
+.contenedor {
+  @include flex-center;
+  flex-direction: row-reverse;
+  gap: 20px;
+  padding: 10px;
+}
+
+.barra-lateral {
+  width: 25%;
+  background-color: $color-lightgrey;
+  padding: 10px;
+  @extend %shadow;
+  @extend %border-radius;
+  @extend %text-center;
+}
+
+.contenido-principal {
+  width: 75%;
+  text-align: justify;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+// Texto de personajes
+.texto-personajes {
+  @include grid-layout(1fr 2fr);
+  gap: 20px;
+  padding: 20px;
+
+  p {
+      grid-column: span 2;
+      @extend %text-center;
+      color: $color-lightgreen;
+  }
+}
+
+// Carrusel
+#carouselExample {
+  margin-bottom: 30px;
+}
+
+// Página 3 - Campañas
+.campañas {
+  @include grid-layout(1fr);
+  gap: 20px;
+  padding: 20px;
+  background-color: $color-black;
+
+  .intro {
+      grid-column: span 2;
+      text-align: justify;
+      padding: 10px;
+      background-color: #ff3e3e;
+      @extend %shadow;
+      @extend %border-radius;
+  }
+
+  .originales,
+  .campañas2 {
+      @include grid-layout(repeat(auto-fit, minmax(300px, 1fr)));
+      gap: 15px;
+  }
+
+  .originales div,
+  .campañas2 div {
+      background-color: $color-darkgreen;
+      border: 1px solid red;
+      padding: 15px;
+      @extend %border-radius;
+  }
+
+  h4 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      line-height: 1.6;
+      color: $color-white;
+  }
+
+  h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: $color-white;
+  }
+
+  p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.5;
+      text-align: justify;
+      color: $color-white;
+  }
+}
+
+// Página 4 - Easter Eggs
+.easters {
+  position: relative;
+  overflow: hidden;
+}
+
+.easters2 {
+  @include grid-layout(repeat(auto-fit, minmax(300px, 1fr)));
+  gap: 15px;
+}
+
+.video-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.contenido {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: justify;
+  padding: 20px;
+
+  h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+  }
+}
+
+.easters2 h2 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.easters2 p {
+  font-size: 16px;
+  line-height: 1.5;
+  @extend %text-center;
+}
+
+.easters2 div {
+  margin-bottom: 20px;
+}
+
+// Video al final de la página
+.video {
+  @include flex-center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+
+  video {
+      max-width: 80%;
+      height: auto;
+      border: 2px solid #fff;
+      @extend %border-radius;
+  }
+
+  figcaption {
+      margin-top: 15px;
+      font-size: 16px;
+      color: #333;
+      @extend %text-center;
+  }
+}
+
+// Página 5 - Infectados
+.infectados {
+  @include grid-layout(repeat(auto-fit, minmax(300px, 1fr)));
+  gap: 20px;
+  padding: 20px;
+  background-color: $color-darkgreen;
+
+  > div {
+      background-color: $color-black;
+      border: 1px solid #ddd;
+      @extend %border-radius;
+      padding: 15px;
+  }
+
+  h3 {
+      grid-column: span 2;
+      @extend %text-center;
+      font-size: 24px;
+      color: $color-red;
+      margin-bottom: 20px;
+  }
+
+  img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 10px;
+      @extend %border-radius;
+      border: 2px solid #ddd;
+  }
+
+  h2 {
+      font-size: 20px;
+      color: $color-red;
+      font-family: $font-creepster;
+      text-decoration: underline overline;
+      margin: 10px 0;
+  }
+
+  p {
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: justify;
+  }
+}
+

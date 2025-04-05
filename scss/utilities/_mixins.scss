@@ -1,0 +1,25 @@
+/*variables*/
+@use '../base/variables' as *;
+
+
+/*utilities*/
+@use 'maps' as*;
+
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin grid-layout($columns) {
+  display: grid;
+  grid-template-columns: $columns;
+}
+
+@mixin grid-layouts($columns, $gap: 10px, $auto-rows: auto) {
+  display: grid;
+  grid-template-columns: $columns;
+  gap: $gap;
+  grid-auto-rows: $auto-rows;
+}

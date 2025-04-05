@@ -1,704 +1,570 @@
-/*Fuente de la pagina*/
-* {
-    margin: 0;
-    padding: 0;
-}
-.fondo {
-    font-family: "Oswald", serif;
-    background-color: black;
+@charset "UTF-8";
+/*Componentes*/
+/*Utilities*/
+/*variables*/
+/*utilities*/
+.h2 h2, p, .fondo h1, .pagina1 p, .pagina1 .barra-lateral1, .barra-lateral, .texto-personajes p, .easters2 p, .video figcaption, .infectados h3 {
+  text-align: center;
 }
 
-/*Navbar y barra inicial, links/menu*/
+.pagina1 .barra-lateral1, .pagina1 .contenido1, .barra-lateral, .campañas .intro, .campañas .originales div,
+.campañas .campañas2 div, .video video, .infectados > div, .infectados img, .cta {
+  border-radius: 8px;
+}
+
+.pagina1 .barra-lateral1, .barra-lateral, .campañas .intro {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/*base*/
 .navbar1 {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    background-color: rgb(182, 65, 65);
-    color: white;
-    padding: 10px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  background-color: rgb(182, 65, 65);
+  color: white;
+  padding: 10px;
 }
 
 .logo1 {
-    font-size: 30px;
-    font-weight: bolder;
-    font-family: "Creepster", system-ui;
-    font-weight: 400;
-    font-style: normal;
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: "Creepster", system-ui;
 }
 
 .menu1 {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 50px;
-    list-style: none;
-    margin: 10px;
-    padding: 30px;
-    font-size: 30px;
-    font-weight: bolder;
-    font-family: "Creepster", system-ui;
-    font-weight: 400;
-    font-style: normal;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 50px;
+  list-style: none;
+  margin: 10px;
+  padding: 30px;
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: "Creepster", system-ui;
 }
 
-
-
-.menu1 a{
-    color: white;
-    font-size: 23px;
-    text-decoration: none;
+.menu1 a {
+  color: white;
+  font-size: 23px;
+  text-decoration: none;
 }
-
-a:hover {
-    font-size: 27px;
-    color:  rgb(19, 13, 20);
+.menu1 a:hover {
+  font-size: 27px;
+  color: rgb(19, 13, 20);
 }
-
-a:active {
-    color: yellowgreen;
+.menu1 a:active {
+  color: yellowgreen;
 }
-
 
 .cta {
-    font-size: 23px;
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-}
-#menu-toggle1 {
-    display: none;
+  font-size: 23px;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
 }
 
-/* Ícono del menú hamburguesa */
 .menu-hamburguesa1 {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    z-index: 10;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 10;
 }
-
 .menu-hamburguesa1 span {
-    height: 3px;
-    width: 25px;
-    background: #333;
-    margin: 4px 0;
-    transition: 0.3s;
+  height: 3px;
+  width: 25px;
+  background: #333;
+  margin: 4px 0;
+  transition: 0.3s;
 }
 
-
-
-
-/* Query para móviles */
-@media (max-width: 768px) {
-    .menu1 {
-        display: none;
-        flex-direction: column;
-        background:  rgb(102, 32, 32);
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        width: 200px;
-        border-radius: 5px;
-    }
-
-    #menu-toggle1:checked + .menu-hamburguesa1 + .menu1 {
-        display: flex;
-    }
-
-    .menu-hamburguesa1 {
-        display: flex;
-        padding: 15px;
-    }
-
-    /*Query pagina 1*/
-    .contenedor1 {
-        display: flex;c
-        flex-direction: column; 
-        padding: 10px; 
-    }
-
-    .barra-lateral1 {
-        width: 100%; 
-        margin-bottom: 20px; 
-        text-align: center; 
-    }
-
-    .barra-lateral1 img {
-        max-width: 100%; 
-        height: auto; 
-        border-radius: 10px; 
-    }
-
-    .contenido1 {
-        width: 100%; 
-        font-size: 14px; 
-        line-height: 1.5; 
-    }
-
-    .contenido1 p {
-        margin-bottom: 10px; 
-    }
-
-    /*Query pagina 2*/
-    .fotopersonajes {
-        padding: 10px; 
-    }
-
-    /* Ajustes para el carrusel */
-    .carousel-inner img {
-        max-width: 100%; 
-        height: auto; 
-    }
-
-    .carousel {
-        margin-top: 20px; 
-    }
-
-    /* Imagen principal */
-    .fotopersonajes img {
-        max-width: 100%; 
-        height: auto; 
-        margin-bottom: 10px; 
-    }
-    .texto-personajes p {
-        font-size: 14px; 
-        line-height: 1.5; 
-        margin-bottom: 15px; 
-        text-align: justify; 
-    }
-    .contenedor {
-        display: flex;
-        flex-direction: column; 
-        gap: 15px; 
-    }
-
-    .barra-lateral {
-        width: 100%; 
-        text-align: center; 
-    }
-
-    .barra-lateral img {
-        max-width: 100%; 
-        height: auto;
-        margin: 10px 0; 
-    }
-
-    .contenido-principal {
-        width: 100%; 
-    }
-
-    .contenido-principal h2 {
-        font-size: 16px; 
-        margin-top: 10px;
-    }
-
-    .contenido-principal p {
-        font-size: 14px; 
-        line-height: 1.5; 
-        margin-bottom: 10px;
-    }
-    
-
-
-    /*Query pagina 3*/
-    .campañas {
-        grid-template-columns: 1fr; 
-        gap: 10px; 
-        padding: 10px; 
-    }
-
-    .intro {
-        grid-column: span 1; 
-        font-size: 16px; 
-        padding: 8px; 
-        box-shadow: none; 
-    }
-
-    .originales, .campañas2 {
-        grid-template-columns: 1fr; 
-        gap: 10px; 
-    }
-
-    .originales div, .campañas2 div {
-        padding: 10px; 
-        font-size: 14px; 
-    }
-
-    .campañas h4 {
-        font-size: 16px; 
-        line-height: 1.4; 
-    }
-
-    .campañas h3 {
-        font-size: 18px; 
-        margin-bottom: 8px; 
-    }
-
-    .campañas p {
-        font-size: 14px; 
-        line-height: 1.4; 
-        margin-bottom: 10px; 
-    }
-
-
-
-    /* Query pagina 4 */
-    .infectados {
-        grid-template-columns: 1fr; 
-        gap: 15px; 
-        padding: 10px; 
-    }
-    
-    .infectados > div {
-        padding: 10px; 
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
-    }
-
-    .infectados h3 {
-        font-size: 20px; 
-    }
-
-    .infectados h2 {
-        font-size: 18px; 
-    }
-
-    .infectados img {
-        max-width: 100%; 
-        height: auto; 
-    }
-
-    .infectados p {
-        font-size: 14px; 
-        line-height: 1.4; 
-    }
-    .infectados video {
-        max-width: 100%; 
-        height: auto; 
-        border-radius: 8px; 
-        margin-top: 10px; 
-    }
-
-    .infectados figcaption {
-        font-size: 12px; 
-        text-align: center; 
-    }
-
-    /*Query pagina 5*/
-    .easters {
-        height: auto; 
-    }
-
-    .video-fondo {
-        height: 50vh; 
-        object-fit: cover; 
-    }
-
-    .contenido {
-        padding: 10px; 
-        text-align: justify; 
-    }
-
-    .contenido h3 {
-        font-size: 16px; 
-        margin-bottom: 10px; 
-    }
-
-    .easters2 h2 {
-        font-size: 16px; 
-        margin-top: 8px;
-    }
-
-    .easters2 p {
-        font-size: 14px; 
-        line-height: 1.4; 
-    }
-
-    .video {
-        margin-top: 20px;
-    }
-
-    .video video {
-        max-width: 100%; 
-        height: auto; 
-        border-radius: 10px; 
-    }
-
-    .video figcaption {
-        font-size: 12px; 
-        text-align: center; 
-    }
+/*Utilities*/
+/*base*/
+.piedepagina {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+.piedepagina p {
+  color: white;
+  font-size: 18px;
+}
+.piedepagina h5 {
+  color: black;
+  font-size: 23px;
+}
+.piedepagina .card {
+  margin: 0 auto;
+  background-color: rgb(75, 87, 104);
 }
 
-
-
-
-
-
-/*Alineaciones y  tamaños de titulos y parrafos sueltos*/
-
-.h2 h2{
-    text-align: center;
-    size: 300px;
-    color: #ff3e3e;;
-    font-family: "Creepster", system-ui;
-    text-decoration: underline overline;
-}
-
-p{
-    text-align: center;
-    color: #e9e5e5;
-}
-
-.fondo h1{
-    padding: 20px;
-    margin: 20px 0;
-    color: #ff3e3e;
-    font-size: 48px;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-}
-
-
-/*Imagenes*/
-.pagina1 img {
-    width: 200px;
-    margin-left: auto;
-}
-.fotopersonajes img{
-        max-width: 100%;  
-        height: auto;    
-        max-height: 300px; 
-        object-fit: contain; 
-        display: block;   
-        margin: 0 auto;   
-}
-
-.tamaño-imagen  img{
-        max-width: 100%;  
-        height: auto;    
-        max-height: 300px; 
-        object-fit: contain; 
-        display: block;   
-        margin: 0 auto;   
-}
-
-
-
-/*Primera Pagina LF4LORE*/
+/*Utilities*/
+/*base*/
 .pagina1 {
-    display: grid;
-    grid-template-columns: 1fr 2 fr;
-    gap: 20px;
-    padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  padding: 20px;
 }
-.pagina1 p{
-    grid-column: span 2;
-    text-align: center;
-    color: white;
+.pagina1 p {
+  grid-column: span 2;
+  color: white;
 }
-
 .pagina1 h3 {
-    color: white;
+  color: white;
 }
 .pagina1 .contenedor1 {
-    display: flex; 
-    flex-direction: row-reverse;
-    gap: 20px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 20px;
+}
+.pagina1 .barra-lateral1 {
+  grid-column: 1;
+  background-color: #033b1b;
+  padding: 15px;
+  border: 1px solid #033b1b;
+}
+.pagina1 .contenido1 {
+  grid-column: 2;
+  background-color: black;
+  border: 5px solid white;
+  padding: 15px;
+  text-align: justify;
 }
 
-.barra-lateral1 {
-    width: 25%; 
-    background-color: #033b1b; 
-    padding: 15px;
-    border: 1px solid #033b1b; 
-    border-radius: 8px; 
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
-    text-align: center; 
-}
-
-.contenido1 {
-    width: 75%; 
-    text-align: justify; 
-    padding: 15px;
-    border-radius: 2%;
-    border: 5px solid white; 
-    background-color: black; 
-}
-
-
-
-
-
-/* Pagina 2 Sup y sus hist*/
 .contenedor {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 20px; 
-    padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 20px;
+  padding: 10px;
 }
 
 .barra-lateral {
-    width: 25%; 
-    background-color: #f4f4f4; 
-    padding: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
-    border-radius: 8px; 
-    text-align: center; 
+  width: 25%;
+  background-color: #f4f4f4;
+  padding: 10px;
 }
 
 .contenido-principal {
-    width: 75%; 
-    text-align: justify; 
-    padding: 10px;
-    border: 1px solid #ddd;}
-
+  width: 75%;
+  text-align: justify;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
 
 .texto-personajes {
-        display: grid;
-        grid-template-columns: 1fr 2 fr;
-        gap: 20px;
-        padding: 20px;
-    }
-.texto-personajes p{
-    grid-column: span 2;
-    text-align: center;
-    color: rgb(103, 221, 103);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  padding: 20px;
+}
+.texto-personajes p {
+  grid-column: span 2;
+  color: rgb(103, 221, 103);
 }
 
 #carouselExample {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
-.texto-personajes div {
-    margin-top: 20px;
-}
-
-
-/*PAGINA 3 CAMPAÑAS*/
 .campañas {
-    display: grid; 
-    grid-template-columns: 1fr; 
-    gap: 20px; 
-    padding: 20px; 
-    background-color: black; 
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+  background-color: black;
 }
-
-.intro {
-    grid-column: span 2; 
-    text-align: justify; 
-    padding: 10px;
-    background-color: #ff3e3e; 
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
-    border-radius: 8px; 
+.campañas .intro {
+  grid-column: span 2;
+  text-align: justify;
+  padding: 10px;
+  background-color: #ff3e3e;
 }
-
-.originales, .campañas2 {
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 15px; 
+.campañas .originales,
+.campañas .campañas2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
 }
-
-.originales div, .campañas2 div {
-    background-color: #033b1b; 
-    border: 1px solid red; 
-    padding: 15px;
-    border-radius: 5px;
+.campañas .originales div,
+.campañas .campañas2 div {
+  background-color: #033b1b;
+  border: 1px solid red;
+  padding: 15px;
 }
-
 .campañas h4 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    line-height: 1.6;
-    color: white;
+  font-size: 18px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: white;
 }
-
 .campañas h3 {
-    font-size: 20px;
-    color: #ff3e3e; 
-    margin-bottom: 10px;
-    color: white;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: white;
 }
-
 .campañas p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.5;
-    text-align: justify;
-    color: white;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+  text-align: justify;
+  color: white;
 }
 
-
-
-
-
-
-
-
-/*Pagina 4 "easter eggs"*/
-/* Sección principal */
 .easters {
-    position: relative; 
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
+
 .easters2 {
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 15px; 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
 }
-/* Video de fondo */
+
 .video-fondo {
-    position: absolute; 
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
-/* Contenido principal */
 .contenido {
-    position: relative; 
-    z-index: 1; 
-    color: #fff; 
-    text-align: justify;
-    padding: 20px;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: justify;
+  padding: 20px;
 }
-
-/* Títulos */
 .contenido h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 .easters2 h2 {
-    font-size: 20px;
-    margin-top: 10px;
+  font-size: 20px;
+  margin-top: 10px;
 }
 
-/* Párrafos */
 .easters2 p {
-    font-size: 16px;
-    line-height: 1.5;
-    text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .easters2 div {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-/*video al final de la pagina*/
 .video {
-    display: flex; /* Activa Flexbox */
-    flex-direction: column; /* Coloca el video y el texto en columna */
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    height: 100vh; /* El contenedor ocupa toda la altura de la pantalla */
-    margin: 0; /* Elimina márgenes extras */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
 }
-
-.video video{
-    max-width: 80%; /* El video ocupa el 80% del ancho del contenedor */
-    height: auto; /* Mantiene la proporción del video */
-    border: 2px solid #fff; /* Borde opcional para destacar el video */
-    border-radius: 10px; /* Bordes redondeados opcionales */
+.video video {
+  max-width: 80%;
+  height: auto;
+  border: 2px solid #fff;
 }
-
 .video figcaption {
-    margin-top: 15px; /* Espaciado entre el video y la descripción */
-    font-size: 16px;
-    color: #333; /* Color oscuro para mejor legibilidad */
-    text-align: center; /* Centra el texto */
-    color: white;
+  margin-top: 15px;
+  font-size: 16px;
+  color: #333;
 }
 
-
-
-
-
-
-
-
-/* Pagina 5 Infectados*/
 .infectados {
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px; 
-    padding: 20px; 
-    background-color: #033b1b; 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: #033b1b;
 }
-
 .infectados > div {
-    background-color: black; 
-    border: 1px solid #ddd; 
-    border-radius: 8px; 
-    padding: 15px; 
+  background-color: black;
+  border: 1px solid #ddd;
+  padding: 15px;
 }
-
-/* Título principal */
 .infectados h3 {
-    grid-column: span 2; 
-    text-align: center;
-    font-size: 24px;
-    color: #ff3e3e; 
-    margin-bottom: 20px;
+  grid-column: span 2;
+  font-size: 24px;
+  color: rgb(182, 65, 65);
+  margin-bottom: 20px;
 }
-/* Imagen de los infectados */
 .infectados img {
-    max-width: 100%; 
-    height: auto;
-    display: block;
-    margin-bottom: 10px;
-    border-radius: 8px; 
-    border: 2px solid #ddd; 
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+  border: 2px solid #ddd;
 }
-
-/* Títulos de cada infectado */
 .infectados h2 {
-    font-size: 20px;
-    color: #ff3e3e;;
-    font-family: "Creepster", system-ui;
-    text-decoration: underline overline;/
-    margin: 10px 0;
+  font-size: 20px;
+  color: rgb(182, 65, 65);
+  font-family: "Creepster", system-ui;
+  text-decoration: underline overline;
+  margin: 10px 0;
 }
 .infectados p {
-    font-size: 16px;
-    line-height: 1.5; 
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/*Utilities*/
+/*base*/
+@media (max-width: 768px) {
+  .menu1 {
+    display: none;
+    flex-direction: column;
+    background: rgb(102, 32, 32);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    border-radius: 8px;
+  }
+  #menu-toggle1:checked + .menu-hamburguesa1 + .menu1 {
+    display: flex;
+  }
+  .menu-hamburguesa1 {
+    display: flex;
+    padding: 15px;
+  }
+  /* Pagina 1 */
+  .contenedor1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+  }
+  .barra-lateral1 {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .barra-lateral1 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  .contenido1 {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .contenido1 p {
+    margin-bottom: 10px;
+  }
+  /* Pagina2 */
+  .fotopersonajes {
+    padding: 10px;
+  }
+  .fotopersonajes img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .texto-personajes p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
     text-align: justify;
-}
-
-figcaption {
-    color: white;
-}
-
-
-
-/*Pie de pagina que se repetira en cada html*/
-.piedepagina p{
-    color: white;
+  }
+  .contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .barra-lateral {
+    width: 100%;
+    text-align: center;
+  }
+  .barra-lateral img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+  .contenido-principal {
+    width: 100%;
+  }
+  .contenido-principal h2 {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .contenido-principal p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  /*  Query para la página 3*/
+  .campañas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 10px;
+  }
+  .intro {
+    grid-column: span 1;
+    font-size: 16px;
+    padding: 8px;
+    box-shadow: none;
+  }
+  .originales,
+  .campañas2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .originales div,
+  .campañas2 div {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .campañas h4 {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .campañas h3 {
     font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .campañas p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+  /*Query para la página 4*/
+  .infectados {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px;
+  }
+  .infectados > div {
+    padding: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .infectados h3 {
+    font-size: 20px;
+  }
+  .infectados h2 {
+    font-size: 18px;
+  }
+  .infectados img {
+    max-width: 100%;
+    height: auto;
+  }
+  .infectados p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .infectados video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  .infectados figcaption {
+    font-size: 12px;
+    text-align: center;
+  }
+  /* Query para la página 5  */
+  .easters {
+    height: auto;
+  }
+  .video-fondo {
+    height: 50vh;
+    object-fit: cover;
+  }
+  .contenido {
+    padding: 10px;
+    text-align: justify;
+  }
+  .contenido h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .easters2 h2 {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+  .easters2 p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .video {
+    margin-top: 20px;
+  }
+  .video video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  .video figcaption {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+/*Variables*/
+/*Utilities*/
+/* variables */
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.piedepagina h5 {
-    color: black;
-    font-size: 23px;
+.fondo {
+  font-family: "Oswald", serif;
+  background-color: black;
 }
 
-.piedepagina {
-    display: flex;             
-    justify-content: center;   
-    align-items: center;       
-    text-align: center;        
-    padding: 20px;             
-}
-.piedepagina  .card{
-    margin: 0 auto;
-    background-color: rgb(75, 87, 104);
+.h2 h2 {
+  color: #ff3e3e;
+  font-family: "Creepster", system-ui;
+  text-decoration: underline overline;
 }
 
+p {
+  color: #e9e5e5;
+}
 
+.fondo h1 {
+  padding: 20px;
+  margin: 20px 0;
+  color: #ff3e3e;
+  font-size: 48px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
 
+.pagina1 img {
+  width: 200px;
+  margin-left: auto;
+}
 
->>>>>>> 10d258a (modificando archivos)
+.fotopersonajes img,
+.tamaño-imagen img {
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,31 @@
+/*Utilities*/
+@use '../utilities/mixins' as *;
+@use '../utilities/extends' as *;
+@use '../utilities/maps' as *;
+
+
+/*base*/
+@use '../base/variables' as *;
+
+// Pie de página que se repetirá en cada html
+.piedepagina {
+    @include flex-center;
+    text-align: center;
+    padding: 20px;
+
+    p {
+        color: $color-white;
+        font-size: 18px;
+    }
+
+    h5 {
+        color: black;
+        font-size: 23px;
+    }
+
+    .card {
+        margin: 0 auto;
+        background-color: rgb(75, 87, 104);
+    }
+}
+
