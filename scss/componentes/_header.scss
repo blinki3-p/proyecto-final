@@ -57,6 +57,9 @@
   @extend %border-radius;
   text-decoration: none;
 }
+#menu-toggle1 {
+  display: none;
+}
 
 // Menu hamburguesa
 .menu-hamburguesa1 {

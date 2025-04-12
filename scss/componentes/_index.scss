@@ -8,7 +8,9 @@
 @use '../base/variables' as *;
 
 .pagina1 {
-  @include grid-layout(1fr 2fr);
+  flex-direction: column;
+  display: flex;
+  grid-template-columns: 1fr 2fr;
   gap: 20px;
   padding: 20px;
 
@@ -16,20 +18,21 @@
       grid-column: span 2;
       @extend %text-center;
       color: $color-white;
+      text-align: center;
   }
 
   h3 {
       color: $color-white;
   }
 
-  .contenedor1 {
-      @include flex-center;
-      flex-direction: row-reverse;
-      gap: 20px;
+.contenedor1 {
+    display: flex; 
+    flex-direction: row-reverse;
+    gap: 20px; 
   }
 
   .barra-lateral1 {
-    grid-column: 1;
+      width: 25%;
       background-color: $color-darkgreen;
       padding: 15px;
       border: 1px solid $color-darkgreen;
@@ -39,7 +42,7 @@
   }
 
   .contenido1 {
-      grid-column: 2;
+      width: 75%;
       background-color: $color-black;
       border: 5px solid $color-white;
       padding: 15px;
@@ -48,18 +51,19 @@
   }
 }
 
-// Página 2
+// Página 2 supervivientes
 .contenedor {
   @include flex-center;
   flex-direction: row-reverse;
   gap: 20px;
   padding: 10px;
+  align-items: stretch;
 }
 
 .barra-lateral {
   width: 25%;
   background-color: $color-lightgrey;
-  padding: 10px;
+  padding: 15px;
   @extend %shadow;
   @extend %border-radius;
   @extend %text-center;
@@ -68,13 +72,13 @@
 .contenido-principal {
   width: 75%;
   text-align: justify;
-  padding: 10px;
+  padding: 15px;
   border: 1px solid #ddd;
 }
 
 // Texto de personajes
 .texto-personajes {
-  @include grid-layout(1fr 2fr);
+  @include flex-center;
   gap: 20px;
   padding: 20px;
 
@@ -208,7 +212,7 @@
   figcaption {
       margin-top: 15px;
       font-size: 16px;
-      color: #333;
+      color: white;
       @extend %text-center;
   }
 }
@@ -257,5 +261,20 @@
       line-height: 1.5;
       text-align: justify;
   }
+  figcaption {
+    margin-top: 15px;
+    font-size: 16px;
+    color: white;
+    @extend %text-center;
+}
+figure {
+  justify-self: center;
+  
+}
+video {
+  display: block;
+  @extend %border-radius;
+  border: 2px solid #fff;
+}
 }
 
