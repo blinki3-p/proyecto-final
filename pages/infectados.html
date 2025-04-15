@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> <!--Link de animate.style-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"><!--Linkeo de animaciones scroll--->
     <title>Infectados</title>
 </head>
 <body class="fondo">
@@ -35,34 +37,35 @@
             </ul>
             <a href="#" class="cta">¡Regístrate!</a>
         </nav>
-        <h1>Infectados</h1>
+        <h1 class="animate__animated animate__bounce animate__fadeInDown">Infectados</h1>
     </header>    
     <main>
     <section>
-        <article class="infectados">
+        <article class="infectados" data-aos="fade-up"
+        data-aos-duration="3000">
             <div>
                 <div><h3>Vamos a conocer a los distintos tipos de infectados del juego, cada uno trae consigo una historia detras:</h3>
                 </div>
-                <div><img src="../assets/images/smoker.jpg" alt="Smoker"><h2>Smoker:</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quibusdam quas repellendus quo unde at impedit eligendi esse saepe dicta adipisci non repellat accusantium praesentium neque sed, enim eum. Amet! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus consequatur consectetur deleniti vel culpa magni in sunt modi ea doloremque est totam sequi quas suscipit consequuntur, odit repellat necessitatibus dolorum? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim repellat ab perferendis illo labore quod, ipsum modi eius magnam voluptates, voluptatem sint nesciunt asperiores voluptate aspernatur atque nobis adipisci non!</p>
+                <div class="imagen-inf"><img src="../assets/images/smoker.jpg" alt="Smoker"><h2>Smoker:</h2>
+                    <p> Infectado alto y delgado, de constitución ectomórfica, que desprende un humo verde de su cuerpo. Atrapa con su larga lengua a un superviviente, provocando que la víctima sea atraída hacia el. Muchas veces la víctima queda atrapada por algún objeto antes de llegar al smoker, y comienza a asfixiarse por acción de la lengua. Sino, este infectado atraerá a su víctima hasta el y cuando este cerca le lastimará con sus manos. Si un jugador es atacado por un smoker, solo dispondrá de un instante para dispararle y soltarse de su lengua antes de ser arrastrado y quedar totalmente indefenso. En ese último caso solo podrá ser salvado por sus compañeros de equipo. Cuando muere, deja una espesa cortina de humo que distorsiona la visión y provoca que los supervivientes tosan incontrolablemente hasta que el humo se disipa, surgiendo así su nombre. El Smoker tiene 250 de vida.</p>
                 </div>
-                <div><img src="../assets/images/Boomer.jpg" alt="Boomer"> <h2>Boomer:</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque minima eum corrupti hic, dicta obcaecati quaerat est voluptatum ab, cum, quibusdam nobis eius nostrum! Repellat ipsam esse a nam ipsa? Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quibusdam quas repellendus quo unde at impedit eligendi esse saepe dicta adipisci non repellat accusantium praesentium neque sed, enim eum. Amet! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus consequatur consectetur deleniti vel culpa magni in sunt modi ea doloremque est totam sequi quas suscipit consequuntur, odit repellat necessitatibus dolorum? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim repellat ab perferendis illo labore quod, ipsum modi eius magnam voluptates, voluptatem sint nesciunt asperiores voluptate aspernatur atque nobis adipisci non</p>
+                <div class="imagen-inf"><img src="../assets/images/Boomer.jpg" alt="Boomer"> <h2>Boomer:</h2>
+                    <p>Infectado obeso, de constitución endomórfica, que puede lanzar su bilis sobre los supervivientes. Esta sustancia actúa como feromona que atrae una gran cantidad de Infectados hacia el superviviente impactado. Cuando muere, el Boomer explota impregnando de bilis todo lo que hay a su alrededor, pudiendo afectar a los supervivientes. Si se está a corta distancia de uno, se recomienda empujarlo primero y dispararle rápidamente antes de que lanze su bilis al jugador. El Boomer es el Infectado mas débil de todos, solamente tiene 50 de salud.</p>
                 </div>
-                <div><img src="../assets/images/hunter.jpg" alt="Hunter"></div> <h2>Hunter:</h2> <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quibusdam quas repellendus quo unde at impedit eligendi esse saepe dicta adipisci non repellat accusantium praesentium neque sed, enim eum. Amet! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus consequatur consectetur deleniti vel culpa magni in sunt modi ea doloremque est totam sequi quas suscipit consequuntur, odit repellat necessitatibus dolorum? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim repellat ab perferendis illo labore quod, ipsum modi eius magnam voluptates, voluptatem sint nesciunt asperiores voluptate aspernatur atque nobis adipisci non
+                <div class="imagen-inf"><img src="../assets/images/hunter.jpg" alt="Hunter"></div> <h2>Hunter:</h2> <p>
+                    Infectado muy rápido y ágil, de constitución atlética, que puede detectar a los supervivientes aún si se encuentran relativamente lejos. Al atacar provoca daño severo. Es capaz de saltar desde un edificio sin hacerse daño y recorrer distancias largas en segundos, saltando en cuatro patas. Se caracteriza por sus gritos y gruñidos, y por llevar una campera azul con capucha. Ataca saltando directamente sobre un jugador, dejándolo a este último tirado en el suelo indefenso, y sólo se podrá liberar con la ayuda de sus compañeros. El Hunter tiene 250 de vida.
                 </p>
-                <div><img src="../assets/images/tank.jpg" alt="Tank"></div> <h2>Tank:</h2> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quibusdam quas repellendus quo unde at impedit eligendi esse saepe dicta adipisci non repellat accusantium praesentium neque sed, enim eum. Amet! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus consequatur consectetur deleniti vel culpa magni in sunt modi ea doloremque est totam sequi quas suscipit consequuntur, odit repellat necessitatibus dolorum? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim repellat ab perferendis illo labore quod, ipsum modi eius magnam voluptates, voluptatem sint nesciunt asperiores voluptate aspernatur atque nobis adipisci nonLorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quibusdam quas repellendus quo unde at impedit eligendi esse saepe dicta adipisci non repellat accusantium praesentium neque sed, enim eum. Amet! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus consequatur consectetur deleniti vel culpa magni in sunt modi ea doloremque est totam sequi quas suscipit consequuntur, odit repellat necessitatibus dolorum? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim repellat ab perferendis illo labore quod, ipsum modi eius magnam voluptates, voluptatem sint nesciunt asperiores voluptate aspernatur atque nobis adipisci non</p>
-                <div><img src="../assets/images/witch.jpg" alt="witch"></div> <h2>witch:</h2> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quibusdam quas repellendus quo unde at impedit eligendi esse saepe dicta adipisci non repellat accusantium praesentium neque sed, enim eum. Amet! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus consequatur consectetur deleniti vel culpa magni in sunt modi ea doloremque est totam sequi quas suscipit consequuntur, odit repellat necessitatibus dolorum? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim repellat ab perferendis illo labore quod, ipsum modi eius magnam voluptates, voluptatem sint nesciunt asperiores voluptate aspernatur atque nobis adipisci non</p>
+                <div class="imagen-inf"><img src="../assets/images/tank.jpg" alt="Tank"></div> <h2>Tank:</h2> <p> Infectado monstruoso con una gran masa muscular y resistencia. Puede agarrar cosas pesadas (como rocas, vehículos livianos, pedazos del suelo, contenedores de basuras e incluso árboles enteros) y tirarlos a los supervivientes. También puede lanzar tanto a infectados como a los supervivientes por los aires, haciéndoles mucho daño. Se reconoce su existencia por la presencia de un bramido quejumbroso y un temblor, el cual desaparece al detectar a los supervivientes o al ser atacado. Es seguro que, por lo menos uno, aparecerá en cada capítulo de campaña, y en el último capítulo de la campaña aparecen muchos Tanks. El Tank tiene 6.000 de vida.</p>
+                <div class="imagen-inf"><img src="../assets/images/witch.jpg" alt="witch"></div> <h2>witch:</h2> <p>Infectado femenino reconocible por su llanto. Se la suele ver sentada en alguna esquina o recoveco oscuro meciéndose, lejos de otros infectados. Tiene garras afiladas y sus ojos tienen un brillo rojo y amarillo, visible en la oscuridad. A diferencia de los demás infectados, ésta no ataca a los supervivientes a menos que se acerquen a ella, la ataquen, o la alumbren con la linterna. La luz y el ruido le molesta, por lo que la linterna o un disparo cerca pueden asustarla. Tan solo uno de sus golpes dejará al jugador indefenso en el suelo. Este es un infectado no jugable: no puede ser controlado en el modo Enfrentamiento. Su forma de llorar y su tamaño podrían engañar, pero es la más fuerte y rápida de los infectados, es el segundo Infectado mas resistente, pero su resistencia no se puede comparar con la del Tank. La Witch tiene 1.000 de vida.</p>
             </div>
             <figure>
-                <video src="../assets/images/¿Cuál es el origen de los Infectados Especiales en Left 4 dead_.mp4" controls></video>
+                <video data-aos="fade-up-left" src="../assets/images/¿Cuál es el origen de los Infectados Especiales en Left 4 dead_.mp4" controls></video>
                 <figcaption>Video que muestra los posibles origenes de los infectados especiales del juego.</figcaption>
             </figure>
         </article>
     </section>    
     </main>
-    <footer class="piedepagina">
+    <footer class="piedepagina" data-aos="zoom-in-up">
         <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
             <div class="col-md-4">
@@ -79,7 +82,11 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> <!--Bootstrap-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><!--Animaciones script-->
+    <script>
+        AOS.init();
+    </script><!--inicializacion de script-->
 </body>
 >>>>>>> 10d258a (modificando archivos)
 </html>

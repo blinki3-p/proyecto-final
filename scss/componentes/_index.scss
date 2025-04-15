@@ -49,7 +49,29 @@
       text-align: justify;
       @extend %border-radius;
   }
+  li{
+    color: white;
+  }
+  span {
+    color: $color-white;
+  }
 }
+//ANIMACIONES PAGINA 1
+.imagen-container:hover {
+  background: linear-gradient(to top, black, transparent);
+  position: relative;
+  cursor: pointer;
+}
+
+.imagen-container img {
+  width: 100%;
+  transition: 1s;
+}
+
+.imagen-container:hover img {
+  transform: scale(1.1); 
+}
+
 
 // Página 2 supervivientes
 .contenedor {
@@ -62,7 +84,7 @@
 
 .barra-lateral {
   width: 25%;
-  background-color: $color-lightgrey;
+  background-color: $color-darkgreen;
   padding: 15px;
   @extend %shadow;
   @extend %border-radius;
@@ -88,7 +110,10 @@
       color: $color-lightgreen;
   }
 }
-
+.personajes img{
+    border: 5px solid #ddd;
+    @extend %border-radius;
+}
 // Carrusel
 #carouselExample {
   margin-bottom: 30px;
@@ -238,16 +263,6 @@
       color: $color-red;
       margin-bottom: 20px;
   }
-
-  img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin-bottom: 10px;
-      @extend %border-radius;
-      border: 2px solid #ddd;
-  }
-
   h2 {
       font-size: 20px;
       color: $color-red;
@@ -276,5 +291,24 @@ video {
   @extend %border-radius;
   border: 2px solid #fff;
 }
+}
+.imagen-inf:hover {
+  background: linear-gradient(to top, black, transparent);
+  position: relative;
+  cursor: pointer;
+}
+
+.imagen-inf img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    @extend %border-radius;
+    border: 2px solid #ddd;
+    transition: 1s;
+}
+
+.imagen-inf:hover img {
+  transform: scale(1.1); 
 }
 

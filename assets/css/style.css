@@ -7,8 +7,8 @@
   text-align: center;
 }
 
-.pagina1 .barra-lateral1, .pagina1 .contenido1, .barra-lateral, .campañas .intro, .campañas .originales div,
-.campañas .campañas2 div, .video video, .infectados > div, .infectados img, .infectados video, .cta {
+.pagina1 .barra-lateral1, .pagina1 .contenido1, .barra-lateral, .personajes img, .campañas .intro, .campañas .originales div,
+.campañas .campañas2 div, .video video, .infectados > div, .infectados video, .imagen-inf img, .cta {
   border-radius: 8px;
 }
 
@@ -21,7 +21,6 @@
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  background-color: rgb(182, 65, 65);
   color: white;
   padding: 10px;
 }
@@ -83,6 +82,10 @@
   transition: 0.3s;
 }
 
+.navbar1 {
+  background-image: linear-gradient(to right, rgb(182, 65, 65), rgb(75, 5, 5), rgb(201, 5, 5));
+}
+
 /*Utilities*/
 /*base*/
 .pagina1 {
@@ -118,6 +121,27 @@
   padding: 15px;
   text-align: justify;
 }
+.pagina1 li {
+  color: white;
+}
+.pagina1 span {
+  color: white;
+}
+
+.imagen-container:hover {
+  background: linear-gradient(to top, black, transparent);
+  position: relative;
+  cursor: pointer;
+}
+
+.imagen-container img {
+  width: 100%;
+  transition: 1s;
+}
+
+.imagen-container:hover img {
+  transform: scale(1.1);
+}
 
 .contenedor {
   display: flex;
@@ -131,7 +155,7 @@
 
 .barra-lateral {
   width: 25%;
-  background-color: #f4f4f4;
+  background-color: #033b1b;
   padding: 15px;
 }
 
@@ -152,6 +176,10 @@
 .texto-personajes p {
   grid-column: span 2;
   color: rgb(103, 221, 103);
+}
+
+.personajes img {
+  border: 5px solid #ddd;
 }
 
 #carouselExample {
@@ -287,13 +315,6 @@
   color: rgb(182, 65, 65);
   margin-bottom: 20px;
 }
-.infectados img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 10px;
-  border: 2px solid #ddd;
-}
 .infectados h2 {
   font-size: 20px;
   color: rgb(182, 65, 65);
@@ -319,6 +340,25 @@
   border: 2px solid #fff;
 }
 
+.imagen-inf:hover {
+  background: linear-gradient(to top, black, transparent);
+  position: relative;
+  cursor: pointer;
+}
+
+.imagen-inf img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+  border: 2px solid #ddd;
+  transition: 1s;
+}
+
+.imagen-inf:hover img {
+  transform: scale(1.1);
+}
+
 /*Utilities*/
 /*base*/
 @media (max-width: 768px) {
@@ -338,6 +378,11 @@
   .menu-hamburguesa1 {
     display: flex;
     padding: 15px;
+    z-index: 9999;
+  }
+  .navbar1 {
+    position: relative;
+    z-index: 100;
   }
   /* Pagina 1 */
   .contenedor1 {
@@ -378,7 +423,7 @@
     font-size: 14px;
     line-height: 1.5;
     margin-bottom: 15px;
-    text-align: justify;
+    text-align: center;
   }
   .contenedor {
     display: flex;
@@ -388,6 +433,7 @@
     gap: 15px;
   }
   .barra-lateral {
+    background-color: #033b1b;
     width: 100%;
     text-align: center;
   }

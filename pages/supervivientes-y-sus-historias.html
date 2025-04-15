@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"><!--Linkeo de animaciones scroll--->
     <title>Supervivientes y sus historias</title>
 </head>
 <body class="fondo h2">
@@ -40,9 +41,11 @@
     <main>
         <section class="fotopersonajes texto-personajes">
             <article>
+                <div class="personajes">
                 <img src="../assets/images/personajes.jpg" alt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, in! Sit commodi eaque amet dolor nostrum tempora exercitationem neque est! Voluptatum modi exercitationem, a amet ducimus corporis commodi labore accusantium!">
                 <p>Vamos a mostrar la historia de cada personaje, quedate atento! Te presento primero a:</p>
-                <div id="carouselExample" class="carousel slide">
+                </div>
+                <div id="carouselExample" class="carousel slide" data-aos="flip-right">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="../assets/images/Bill.jpg" class="d-block w-100" alt="Bill">
@@ -67,34 +70,34 @@
                     </button>
                 </div>
                 <div class="contenedor">
-                    <div class="barra-lateral">
+                    <div class="barra-lateral" data-aos="fade-left">
                         <h3>Personajes del juego:</h3>
                         <img src="../assets/images/personajes.jpg" alt="Imagen relacionada">
                         <p>Supervivientes de Left 4 Dead, vistos de izquierda a derecha: Bill, Zoey, Louis y Francis</p>
                     </div>
-                    <div class="contenido-principal">
+                    <div class="contenido-principal" data-aos="fade-right">
                         <div>
                             <h2>Bill</h2>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus sapiente ducimus odio expedita vel nobis ipsum, qui quas nam non! Alias maiores aperiam veniam inventore quasi quod sit praesentium fugit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil numquam architecto odit velit dolore consequatur voluptatibus, amet veritatis explicabo laboriosam excepturi quod molestias sint. Ipsam obcaecati impedit quae cum perferendis!</p>
+                            <p> es un veterano de la Guerra de Vietnam. Su gran experiencia hace que esta lucha le resulte un paseo. Debido a dicha experiencia, posee un carisma, una valentía y una capacidad de liderazgo que ninguno de los demás supervivientes.</p>
                         </div>
                         <div>
                             <h2>Francis</h2>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum consequatur voluptatum deserunt illo rerum corporis quae dolore officiis quod cum accusantium enim libero pariatur facilis commodi hic adipisci, totam numquam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, ab voluptatibus similique modi, dolores delectus et quas sint facere excepturi deserunt possimus esse. Molestiae recusandae, explicabo vel ipsa suscipit unde.</p>
+                            <p> Es un motociclista tatuado en gran parte de su cuerpo que odia todo menos el matar infectados. Ésta puede ser su mayor debilidad, ya que le hace ser más confiado que el resto de los supervivientes. Sin embargo, el mismo carácter que lo hace ser un poco inconsciente le permite ser el más arriesgado a la hora de enfrentarse a los enemigos.</p>
                         </div>
                         <div>
                             <h2>Louis</h2>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias beatae, quibusdam harum modi corrupti repudiandae at tenetur ab illum in ullam voluptates atque neque ipsam incidunt aliquid nemo enim ad! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ab rerum dicta, officiis explicabo error, nulla, nihil beatae ullam quae aspernatur ipsa ex. Beatae culpa magnam ipsa vel assumenda repellendus.</p>
+                            <p>Hasta antes de la infección era un típico empleado de oficina en una empresa en Filadelfia. Un día Louis descubre un escenario desolador: sus compañeros de trabajo muertos y la oficina destruida. A partir de ello se dedica a matar infectados. Su carácter simpático, a veces burlón y optimista; le brinda un toque de humor al juego, amenizando el constante estado de tensión.</p>
                         </div>
                         <div>
                             <h2>Zoey</h2>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit nobis amet voluptatum fugiat quas molestiae sed in voluptas possimus ratione enim placeat sunt animi nemo, facere nihil reprehenderit similique a. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim non, fugit dolores dolor nulla debitis recusandae maiores quibusdam officia nesciunt repudiandae reiciendis cumque quis tenetur inventore, labore est temporibus animi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quam, beatae hic maxime vero laudantium ex asperiores. Labore, nisi soluta. Labore harum repellendus consequatur consequuntur sunt laborum, inventore quia modi!</p>
+                            <p> La más joven de los supervivientes, siempre evitando los estudios y viendo películas de terror. Luego que su familia fuera infectada frente a ella y viéndose obligada a matarlos ella misma se dedica a matar infectados, tratando de salir con vida.</p>
                         </div>
                     </div>
                 </div>
             </article>
         </section>
     </main>
-    <footer class="piedepagina">
+    <footer class="piedepagina" data-aos="zoom-in-up">
         <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
             <div class="col-md-4">
@@ -111,7 +114,11 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> <!--Bootstrap scipt-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><!--Animaciones script-->
+    <script>
+        AOS.init();
+    </script><!--inicializacion de script-->
 </body>
 >>>>>>> 10d258a (modificando archivos)
 </html>
