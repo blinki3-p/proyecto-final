@@ -362,6 +362,9 @@
 /*Utilities*/
 /*base*/
 @media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
   .menu1 {
     display: none;
     flex-direction: column;
@@ -431,6 +434,7 @@
     align-items: center;
     flex-direction: column;
     gap: 15px;
+    flex-wrap: wrap;
   }
   .barra-lateral {
     background-color: #033b1b;
@@ -562,6 +566,12 @@
   .video figcaption {
     font-size: 12px;
     text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .contenido1, .contenido-principal, .campañas, .infectados, .easters2 {
+    font-size: 12px;
+    padding: 8px;
   }
 }
 /*Utilities*/
