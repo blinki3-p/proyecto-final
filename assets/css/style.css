@@ -387,191 +387,72 @@
     position: relative;
     z-index: 100;
   }
-  /* Pagina 1 */
+  .pagina1 {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px;
+  }
   .contenedor1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    gap: 15px;
+  }
+  .barra-lateral1 {
+    width: 40%;
     padding: 10px;
+  }
+  .contenido1 {
+    width: 60%;
+    padding: 10px;
+  }
+  .campañas {
+    gap: 15px;
+    padding: 15px;
+  }
+  .easters2 {
+    grid-template-columns: 1fr;
+  }
+  .infectados {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .pagina1 {
+    padding: 10px;
+    gap: 10px;
+  }
+  .contenedor1 {
+    flex-direction: column;
+    gap: 10px;
   }
   .barra-lateral1 {
     width: 100%;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  .barra-lateral1 img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+    padding: 8px;
   }
   .contenido1 {
     width: 100%;
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  .contenido1 p {
-    margin-bottom: 10px;
-  }
-  /* Pagina2 */
-  .fotopersonajes {
-    padding: 10px;
-  }
-  .fotopersonajes img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  .texto-personajes p {
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 15px;
-    text-align: center;
-  }
-  .contenedor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 15px;
-    flex-wrap: wrap;
-  }
-  .barra-lateral {
-    background-color: #033b1b;
-    width: 100%;
-    text-align: center;
-  }
-  .barra-lateral img {
-    max-width: 100%;
-    height: auto;
-    margin: 10px 0;
-  }
-  .contenido-principal {
-    width: 100%;
-  }
-  .contenido-principal h2 {
-    font-size: 16px;
-    margin-top: 10px;
-  }
-  .contenido-principal p {
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 10px;
-  }
-  /*  Query para la página 3*/
-  .campañas {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 10px;
-  }
-  .intro {
-    grid-column: span 1;
-    font-size: 16px;
     padding: 8px;
-    box-shadow: none;
-  }
-  .originales,
-  .campañas2 {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  .originales div,
-  .campañas2 div {
-    padding: 10px;
     font-size: 14px;
   }
-  .campañas h4 {
-    font-size: 16px;
-    line-height: 1.4;
-  }
-  .campañas h3 {
-    font-size: 18px;
-    margin-bottom: 8px;
-  }
-  .campañas p {
-    font-size: 14px;
-    line-height: 1.4;
-    margin-bottom: 10px;
-  }
-  /*Query para la página 4*/
+  .campañas,
+  .easters2,
   .infectados {
-    display: grid;
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 10px;
     padding: 10px;
   }
-  .infectados > div {
-    padding: 10px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  h2, h3, h4 {
+    font-size: 16px;
   }
-  .infectados h3 {
-    font-size: 20px;
-  }
-  .infectados h2 {
-    font-size: 18px;
-  }
-  .infectados img {
-    max-width: 100%;
-    height: auto;
-  }
-  .infectados p {
+  p {
     font-size: 14px;
     line-height: 1.4;
   }
-  .infectados video {
+  img, video {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
-    margin-top: 10px;
-  }
-  .infectados figcaption {
-    font-size: 12px;
-    text-align: center;
-  }
-  /* Query para la página 5  */
-  .easters {
-    height: auto;
-  }
-  .video-fondo {
-    height: 50vh;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .contenido {
-    padding: 10px;
-    text-align: justify;
-  }
-  .contenido h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  .easters2 h2 {
-    font-size: 16px;
-    margin-top: 8px;
-  }
-  .easters2 p {
-    font-size: 14px;
-    line-height: 1.4;
-  }
-  .video {
-    margin-top: 20px;
-  }
-  .video video {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  .video figcaption {
-    font-size: 12px;
-    text-align: center;
-  }
-}
-@media (max-width: 480px) {
-  .contenido1, .contenido-principal, .campañas, .infectados, .easters2 {
-    font-size: 12px;
-    padding: 8px;
   }
 }
 /*Utilities*/

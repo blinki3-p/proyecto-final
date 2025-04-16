@@ -36,221 +36,85 @@ display: flex;
     position: relative;
     z-index: 100;
 }
-/* Pagina 1 */
-.contenedor1 {
-@include flex-center;
-flex-direction: column;
-padding: 10px;
-}
-
-.barra-lateral1 {
-    width: 100%;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.barra-lateral1 img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.contenido1 {
-width: 100%;
-font-size: 14px;
-line-height: 1.5;
-
-    p   {
-        margin-bottom: 10px;
-        }
-}
-
-/* Pagina2 */
-.fotopersonajes {
-    padding: 10px;
-
-    img {
-        max-width: 100%;
-        height: auto;
-        margin-bottom: 10px;
-        }
-}
-
-.texto-personajes {
-    p {
-        font-size: 14px;
-        line-height: 1.5;
-        margin-bottom: 15px;
-        text-align: center;
-        }
-}
-
-.contenedor {
-    @include flex-center;
-    flex-direction: column;
+.pagina1 {
+    grid-template-columns: 1fr; // Ajusta a una sola columna
     gap: 15px;
-    flex-wrap: wrap;
-}
+    padding: 15px;
+  }
 
-.barra-lateral {
-    background-color: $color-darkgreen;
-    width: 100%;
-    text-align: center;
-}
-
-.barra-lateral img {
-    max-width: 100%;
-    height: auto;
-    margin: 10px 0;
-}
-
-.contenido-principal {
-    width: 100%;
-}
-
-.contenido-principal h2 {
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-.contenido-principal p {
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 10px;
-}
-
-/*  Query para la página 3*/
-.campañas {
-    @include grid-layout(1fr);
-    gap: 10px;
-    padding: 10px;
-}
-
-.intro {
-    grid-column: span 1;
-    font-size: 16px;
-    padding: 8px;
-    box-shadow: none;
-}
-
-.originales,
-.campañas2 {
-    @include grid-layout(1fr);
-    gap: 10px;
-}
-
-.originales div,
-.campañas2 div {
-    padding: 10px;
-    font-size: 14px;
-}
-
-.campañas h4 {
-    font-size: 16px;
-    line-height: 1.4;
-}
-
-.campañas h3 {
-    font-size: 18px;
-    margin-bottom: 8px;
-}
-
-.campañas p {
-    font-size: 14px;
-    line-height: 1.4;
-    margin-bottom: 10px;
-}
-
-/*Query para la página 4*/
-.infectados {
-    @include grid-layout(1fr);
+  .contenedor1 {
+    flex-direction: column; // Cambio de disposición en pantallas más pequeñas
     gap: 15px;
+  }
+
+  .barra-lateral1 {
+    width: 40%;
     padding: 10px;
-}
+  }
 
-.infectados > div {
+  .contenido1 {
+    width: 60%;
     padding: 10px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-}
+  }
 
-.infectados h3 {
-    font-size: 20px;
-}
+  .campañas {
+    gap: 15px;
+    padding: 15px;
+  }
 
-.infectados h2 {
-    font-size: 18px;
-}
+  .easters2 {
+    grid-template-columns: 1fr;
+  }
 
-.infectados img {
-    max-width: 100%;
-    height: auto;
+  .infectados {
+    grid-template-columns: 1fr;
+  }
 }
-
-.infectados p {
-    font-size: 14px;
-    line-height: 1.4;
-}
-
-.infectados video {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 10px;
-}
-
-.infectados figcaption {
-    font-size: 12px;
-    text-align: center;
-}
-/* Query para la página 5  */
-.easters {
-    height: auto;
-}
-
-.video-fondo {
-    height: 50vh;
-    object-fit: cover;
-}
-
-.contenido {
-    padding: 10px;
-    text-align: justify;
-}
-
-.contenido h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.easters2 h2 {
-    font-size: 16px;
-    margin-top: 8px;
-}
-
-.easters2 p {
-    font-size: 14px;
-    line-height: 1.4;
-}
-
-.video {
-margin-top: 20px;
-}
-
-.video video {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.video figcaption {
-    font-size: 12px;
-    text-align: center;
-}
-}
-
-@media (max-width: 480px) {
-    .contenido1, .contenido-principal, .campañas, .infectados, .easters2 {
-        font-size: 12px;
-        padding: 8px;
+@media (max-width: 768px) {
+    body {
+      overflow-x: hidden; // Evitar scroll horizontal
     }
-}
+  
+    .pagina1 {
+      padding: 10px;
+      gap: 10px;
+    }
+  
+    .contenedor1 {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .barra-lateral1 {
+      width: 100%;
+      padding: 8px;
+    }
+  
+    .contenido1 {
+      width: 100%;
+      padding: 8px;
+      font-size: 14px; // Reducción para mejor legibilidad
+    }
+  
+    .campañas,
+    .easters2,
+    .infectados {
+      grid-template-columns: 1fr; // Todas las secciones en una sola columna
+      gap: 10px;
+      padding: 10px;
+    }
+  
+    h2, h3, h4 {
+      font-size: 16px;
+    }
+  
+    p {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  
+    img, video {
+      max-width: 100%;
+      height: auto;
+    }
+  }
