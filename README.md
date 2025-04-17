@@ -1,0 +1,1 @@
+Hola que tal? Mi nombre es Pablo y aca te muestro mi primer proyecto de HTML y CSS, esta basado en un videojuego, donde te cuento datos de su creacion, la historia de los personajes e infectados especiales, ademas de secretos oscuros y los distintos tipos de mapas o "campañas". Exitos descubriendo el lore de este maravilloso juego.
