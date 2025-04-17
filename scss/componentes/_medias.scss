@@ -45,13 +45,13 @@ display: flex;
     z-index: 100;
 }
 .pagina1 {
-    grid-template-columns: 1fr; // Ajusta a una sola columna
+    grid-template-columns: 1fr; 
     gap: 15px;
     padding: 15px;
 }
 
 .contenedor1 {
-    flex-direction: column; // Cambio de disposición en pantallas más pequeñas
+    flex-direction: column; 
     gap: 15px;
 }
 
@@ -134,7 +134,7 @@ display: flex;
 
 
     body {
-      overflow-x: hidden; // Evitar scroll horizontal
+    overflow-x: hidden; 
     }
 
     .pagina1 {
@@ -155,13 +155,13 @@ display: flex;
     .contenido1 {
     width: 100%;
     padding: 8px;
-      font-size: 14px; // Reducción para mejor legibilidad
+    font-size: 14px; 
     }
 
     .campañas,
     .easters2,
     .infectados {
-      grid-template-columns: 1fr; // Todas las secciones en una sola columna
+    grid-template-columns: 1fr; 
     gap: 10px;
     padding: 10px;
     }
